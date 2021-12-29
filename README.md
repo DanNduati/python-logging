@@ -53,3 +53,5 @@ Output
 ```
 2021-12-29 19:44:49,712 - Admin logged in
 ```
+
+## Logging variable data
