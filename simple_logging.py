@@ -12,7 +12,7 @@ def logerr():
     try:
         c = a/b
     except Exception as e:
-        logging.error("Exception occured",exc_info=True)
+        logging.exception("Exception occured")
     else:
         pass
 

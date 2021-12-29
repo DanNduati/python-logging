@@ -51,3 +51,19 @@ Traceback (most recent call last):
     c = a/b
 ZeroDivisionError: division by zero
 root - INFO - 29-Dec-21 19:57:47 - Done!
+root - INFO - 29-Dec-21 20:02:28 - Running main
+root - ERROR - 29-Dec-21 20:02:28 - Dan raised an error
+root - ERROR - 29-Dec-21 20:02:28 - Exception occured
+Traceback (most recent call last):
+  File "/home/daniel/Desktop/learn/logging/simple_logging.py", line 13, in logerr
+    c = a/b
+ZeroDivisionError: division by zero
+root - INFO - 29-Dec-21 20:02:28 - Done!
+root - INFO - 29-Dec-21 20:02:30 - Running main
+root - ERROR - 29-Dec-21 20:02:30 - Dan raised an error
+root - ERROR - 29-Dec-21 20:02:30 - Exception occured
+Traceback (most recent call last):
+  File "/home/daniel/Desktop/learn/logging/simple_logging.py", line 13, in logerr
+    c = a/b
+ZeroDivisionError: division by zero
+root - INFO - 29-Dec-21 20:02:30 - Done!
