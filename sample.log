@@ -6,3 +6,9 @@ root - INFO - Done!
 2021-12-29 19:44:49,712 - Done!
 29-Dec-21 19:45:44 - Program started
 29-Dec-21 19:45:44 - Done!
+29-Dec-21 19:50:07 - Running main
+29-Dec-21 19:50:07 - Dan raised an error
+29-Dec-21 19:50:07 - Done!
+root - INFO - 29-Dec-21 19:50:48 - Running main
+root - ERROR - 29-Dec-21 19:50:48 - Dan raised an error
+root - INFO - 29-Dec-21 19:50:48 - Done!
