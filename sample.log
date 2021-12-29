@@ -12,3 +12,42 @@ root - INFO - Done!
 root - INFO - 29-Dec-21 19:50:48 - Running main
 root - ERROR - 29-Dec-21 19:50:48 - Dan raised an error
 root - INFO - 29-Dec-21 19:50:48 - Done!
+root - INFO - 29-Dec-21 19:54:30 - Running main
+root - ERROR - 29-Dec-21 19:54:30 - Dan raised an error
+root - INFO - 29-Dec-21 19:54:47 - Running main
+root - ERROR - 29-Dec-21 19:54:47 - Dan raised an error
+root - INFO - 29-Dec-21 19:55:03 - Running main
+root - ERROR - 29-Dec-21 19:55:03 - Dan raised an error
+root - INFO - 29-Dec-21 19:55:31 - Running main
+root - ERROR - 29-Dec-21 19:55:31 - Dan raised an error
+root - INFO - 29-Dec-21 19:55:31 - Done!
+root - INFO - 29-Dec-21 19:55:33 - Running main
+root - ERROR - 29-Dec-21 19:55:33 - Dan raised an error
+root - INFO - 29-Dec-21 19:55:33 - Done!
+root - INFO - 29-Dec-21 19:55:34 - Running main
+root - ERROR - 29-Dec-21 19:55:34 - Dan raised an error
+root - INFO - 29-Dec-21 19:55:34 - Done!
+root - INFO - 29-Dec-21 19:55:48 - Running main
+root - ERROR - 29-Dec-21 19:55:48 - Dan raised an error
+root - INFO - 29-Dec-21 19:56:48 - Running main
+root - ERROR - 29-Dec-21 19:56:48 - Dan raised an error
+root - INFO - 29-Dec-21 19:56:49 - Running main
+root - ERROR - 29-Dec-21 19:56:49 - Dan raised an error
+root - INFO - 29-Dec-21 19:57:14 - Running main
+root - ERROR - 29-Dec-21 19:57:14 - Dan raised an error
+root - ERROR - 29-Dec-21 19:57:14 - Exception occurred
+Traceback (most recent call last):
+  File "/home/daniel/Desktop/learn/logging/simple_logging.py", line 13, in logerr
+    c = a/b
+ZeroDivisionError: division by zero
+root - INFO - 29-Dec-21 19:57:14 - Done!
+root - INFO - 29-Dec-21 19:57:28 - Running main
+root - ERROR - 29-Dec-21 19:57:28 - Dan raised an error
+root - INFO - 29-Dec-21 19:57:47 - Running main
+root - ERROR - 29-Dec-21 19:57:47 - Dan raised an error
+root - ERROR - 29-Dec-21 19:57:47 - Exception occured
+Traceback (most recent call last):
+  File "/home/daniel/Desktop/learn/logging/simple_logging.py", line 13, in logerr
+    c = a/b
+ZeroDivisionError: division by zero
+root - INFO - 29-Dec-21 19:57:47 - Done!
