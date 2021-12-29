@@ -26,3 +26,30 @@ You can use the `basicConfig(**kwargs)` method to configure the logging. Some of
 * `filename`: This specifies the file.
 * `filemode`: If filename is given, the file is opened in this mode. The default is a, which means append.
 * `format`: This is the format of the log message.
+
+Calling `basicConfig()` to configure the root logger works only if the root logger has not been configured before. Basically, this function can only be called once.
+
+## Formatting the output
+Examples:
+process id
+```python
+import logging
+
+logging.basicConfig(format='%(process)d-%(levelname)s-%(message)s')
+logging.warning('This is a Warning')
+```
+Output
+```bash
+18472-WARNING-This is a Warning
+```
+date and time info
+```python
+import logging
+
+logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
+logging.info('Admin logged in')
+```
+Output
+```
+2021-12-29 19:44:49,712 - Admin logged in
+```
