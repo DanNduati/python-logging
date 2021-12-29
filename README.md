@@ -55,3 +55,58 @@ Output
 ```
 
 ## Logging variable data
+```python
+import logging
+
+name = 'Daniel'
+
+logging.error(f'{name} raised an error')
+```
+Output
+```
+ERROR:root:Daniel raised an error
+```
+
+## Capturing stack traces
+The logging module also allows you to capture the full stack traces in an application. Exception information can be captured if the exc_info parameter is passed as True, and the logging functions are called like this:
+```python
+import logging
+
+a = 5
+b = 0
+
+try:
+  c = a / b
+except Exception as e:
+  logging.error("Exception occurred", exc_info=True)
+```
+```bash
+ERROR:root:Exception occurred
+Traceback (most recent call last):
+  File "exceptions.py", line 6, in <module>
+    c = a / b
+ZeroDivisionError: division by zero
+```
+logging.exception() method, which logs a message with level ERROR and adds exception information to the message. To put it more simply, calling logging.exception() is like calling logging.error(exc_info=True). But since this method always dumps exception information, it should only be called from an exception handler. 
+
+## Create custom logger
+You can (and should) define your own logger by creating an object of the Logger class, especially if your application has multiple modules.The most commonly used classes defined in the logging module are the following:
+* `Logger`: This is the class whose objects will be used in the application code directly to call the functions.
+* `LogRecord`: Loggers automatically create LogRecord objects that have all the information related to the event being logged, like the name of the logger, the function, the line number, the message, and more.
+* `Handler`: Handlers send the LogRecord to the required output destination, like the console or a file. Handler is a base for subclasses like StreamHandler, FileHandler, SMTPHandler, HTTPHandler, and more. These subclasses send the logging outputs to corresponding destinations, like sys.stdout or a disk file.
+* `Formatter`: This is where you specify the format of the output by specifying a string format that lists out the attributes that the output should contain.
+
+Out of these, we mostly deal with the objects of the Logger class, which are instantiated using the module-level function logging.getLogger(name). Multiple calls to getLogger() with the same name will return a reference to the same Logger object, which saves us from passing the logger objects to every part where it’s needed. Here’s an example:
+```python
+import logging
+
+logger = logging.getLogger('example_logger')
+logger.warning('This is a warning')
+```
+```bash
+This is a warning
+```
+This creates a custom logger named example_logger, but unlike the root logger, the name of a custom logger is not part of the default output format and has to be added to the configuration.Again, unlike the root logger, a custom logger can’t be configured using basicConfig(). You have to configure it using Handlers and Formatters:
+
+### Using handlers
+Handlers come into the picture when you want to configure your own loggers and send the logs to multiple places when they are generated. Handlers send the log messages to configured destinations like the standard output stream or a file or over HTTP or to your email via SMTP.A logger that you create can have more than one handler, which means you can set it up to be saved to a log file and also send it over email.
